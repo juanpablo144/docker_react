@@ -20,16 +20,10 @@ services:
             - ./usr/src/api:/usr/src/api/src
         expose:
             - 9000
-        links:
-            - mongo
-    mongo:
+        depends_on:
+            - mongodb
+    mongodb:
         image: mongo
-        expose:
-            - "27017"
-        environment:
-            - AUTH=no
         ports:
-            - "127.0.0.1:27017:27017"
-
-
+            - 27017:27017
             

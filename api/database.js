@@ -1,6 +1,6 @@
 const mongose = require('mongoose');
 
-mongose.connect('mongodb://localhost/pruebaReactDocker',{
+mongose.connect('mongodb://mongo:27017/pruebaReactDocker',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
